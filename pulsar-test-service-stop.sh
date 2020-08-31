@@ -24,5 +24,3 @@ PULSAR_DIR="${PULSAR_DIR:-/tmp/pulsar-test-dist}"
 cd $PULSAR_DIR
 
 bin/pulsar-daemon stop standalone -force
-
-cat /tmp/pulsar-test-dist/logs/standalone.out
