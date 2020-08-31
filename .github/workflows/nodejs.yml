@@ -13,4 +13,6 @@ jobs:
 
       - name: Test
         run: |
-          ./run-unit-tests.sh
+          ./run-unit-tests.sh;ls -ltra /tmp/pulsar-test-dist/logs/standalone.out;cat /tmp/pulsar-test-dist/logs/standalone.out
+
+
