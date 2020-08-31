@@ -13,4 +13,4 @@ jobs:
 
       - name: Test
         run: |
-          ./docker-tests.sh
+          ./run-unit-tests.sh
