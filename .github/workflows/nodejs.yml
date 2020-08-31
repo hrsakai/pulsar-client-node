@@ -5,7 +5,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     container:
-      image: apachepulsar/pulsar-build:ubuntu-16.04
+      image: apachepulsar/pulsar-build:latest
 
     steps:
       - name: Check out code into the Node.js module directory
@@ -13,4 +13,15 @@ jobs:
 
       - name: Test
         run: |
-          ./run-unit-tests.sh
+          ./run-unit-tests.sh;ls -ltra /tmp/pulsar-test-dist/logs/standalone.out;cat /tmp/pulsar-test-dist/logs/standalone.out
+          
+      - name: Test2
+        run: |
+          ls -ltra /tmp/pulsar-test-dist/logs/standalone.out
+          
+      - name: Test3
+        run: |
+          cat /tmp/pulsar-test-dist/logs/standalone.out
+
+
+
