@@ -22,3 +22,12 @@ jobs:
       - name: Test3
         run: |
           cat /tmp/pulsar-test-dist/logs/standalone.out
+          
+      - name: Test4
+        run: |
+          cat /tmp/pulsar-test-dist/bin/pulsar-standalone.pid
+          
+      - name: Test5
+        run: |
+          ls -ltra /tmp/pulsar-test-dist/bin/pulsar-standalone.pid
+
