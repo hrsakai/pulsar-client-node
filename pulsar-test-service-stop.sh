@@ -23,4 +23,6 @@ set -e
 PULSAR_DIR="${PULSAR_DIR:-/tmp/pulsar-test-dist}"
 cd $PULSAR_DIR
 
+export PULSAR_STOP_TIMEOUT=100
+
 bin/pulsar-daemon stop standalone -force
