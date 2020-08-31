@@ -25,9 +25,14 @@ jobs:
           
       - name: Test4
         run: |
-          cat /tmp/pulsar-test-dist/bin/pulsar-standalone.pid
+          cat /tmp/pulsar-test-dist/bin/pulsar-standalone.pid || true
           
       - name: Test5
         run: |
-          ls -ltra /tmp/pulsar-test-dist/bin/pulsar-standalone.pid
+          ls -ltra /tmp/pulsar-test-dist/bin/pulsar-standalone.pid || true
+          
+      - name: Test6
+        run: |
+          ls -ltra /tmp/pulsar-test-dist/bin/ || true
+
 
