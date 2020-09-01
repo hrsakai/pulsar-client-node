@@ -15,6 +15,11 @@ jobs:
         run: |
           ./run-unit-tests.sh
           
+      - name: Test-ps
+        run: |
+          ps aux|grep java || true
+
+          
       - name: Test2
         run: |
           ls -ltra /tmp/pulsar-test-dist/logs/standalone.out || true
