@@ -35,4 +35,10 @@ jobs:
         run: |
           ls -ltra /tmp/pulsar-test-dist/bin/ || true
 
-
+      - name: Test7
+        run: |
+          find / -name *.pid || true
+          
+      - name: Test8
+        run: |
+          find / -name pulsar-managed-ledger-admin || true
