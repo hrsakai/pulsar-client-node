@@ -11,17 +11,43 @@ jobs:
       - name: Check out code into the Node.js module directory
         uses: actions/checkout@v2
 
-      - name: Test
+      - name: Test-run-unit-tests
         run: |
-          ./run-unit-tests.sh;ls -ltra /tmp/pulsar-test-dist/logs/standalone.out;cat /tmp/pulsar-test-dist/logs/standalone.out
+          ./run-unit-tests.sh
+          
+      - name: Test-ps
+        run: |
+          ps aux|grep java || true
+
           
       - name: Test2
         run: |
-          ls -ltra /tmp/pulsar-test-dist/logs/standalone.out
+          ls -ltra /tmp/pulsar-test-dist/logs/standalone.out || true
           
       - name: Test3
         run: |
-          cat /tmp/pulsar-test-dist/logs/standalone.out
+          cat /tmp/pulsar-test-dist/logs/standalone.out || true
+          
+      - name: Test4
+        run: |
+          cat /tmp/pulsar-test-dist/bin/pulsar-standalone.pid || true
+          
+      - name: Test5
+        run: |
+          ls -ltra /tmp/pulsar-test-dist/bin/pulsar-standalone.pid || true
+          
+      - name: Test6
+        run: |
+          ls -ltra /tmp/pulsar-test-dist/bin/ || true
 
+      - name: Test7
+        run: |
+          find / -name *.pid || true
+          
+      - name: Test8
+        run: |
+          find / -name pulsar-managed-ledger-admin || true
 
-
+      - name: Test-stop
+        run: |
+          ./pulsar-test-service-stop.sh
