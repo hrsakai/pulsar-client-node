@@ -17,11 +17,11 @@ jobs:
           
       - name: Test2
         run: |
-          ls -ltra /tmp/pulsar-test-dist/logs/standalone.out
+          ls -ltra /tmp/pulsar-test-dist/logs/standalone.out || true
           
       - name: Test3
         run: |
-          cat /tmp/pulsar-test-dist/logs/standalone.out
+          cat /tmp/pulsar-test-dist/logs/standalone.out || true
           
       - name: Test4
         run: |
