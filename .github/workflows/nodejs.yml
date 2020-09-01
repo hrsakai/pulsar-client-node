@@ -11,7 +11,7 @@ jobs:
       - name: Check out code into the Node.js module directory
         uses: actions/checkout@v2
 
-      - name: Test
+      - name: Test-run-unit-tests
         run: |
           ./run-unit-tests.sh
           
@@ -42,3 +42,6 @@ jobs:
       - name: Test8
         run: |
           find / -name pulsar-managed-ledger-admin || true
+      - name: Test-stop
+        run: |
+          ./pulsar-test-service-stop.sh
