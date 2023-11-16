@@ -253,6 +253,10 @@ jobs:
     timeout-minutes: 3000
     strategy:
       fail-fast: false
+      matrix:
+        python:
+          - "3.10"
+
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js 18
@@ -260,6 +264,10 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
+      - name: Use Python ${{ matrix.python }}
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python }}
       - name: Install CPP lib
         run: |
           export HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=true
