@@ -61,7 +61,7 @@ jobs:
           yarn install --ignore-scripts
 
   macos-napi:
-    name: Build NAPI macos - Node ${{matrix.nodejs}} - ${{matrix.arch}}
+    name: Build NAPI macos - Node ${{matrix.nodejs}} - ${{matrix.python}} - ${{matrix.arch}}
     runs-on: macos-latest
     timeout-minutes: 3000
 
