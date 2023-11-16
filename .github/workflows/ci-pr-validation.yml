@@ -86,7 +86,7 @@ jobs:
           cache: 'npm'
           
       - name: Use Python ${{ matrix.python }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python }}
 
